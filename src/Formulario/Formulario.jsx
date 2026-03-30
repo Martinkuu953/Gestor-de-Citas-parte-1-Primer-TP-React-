@@ -1,50 +1,25 @@
-import '../Formulario/Formulario.css';
-    
+// src/Formulario/Formulario.jsx
+import Entrada from './Entrada';
+import './Formulario.css';
+
 function Formulario() {
   return (
     <div className="one-half column">
       <h2>Crear mi Cita</h2>
       <form>
-        <label>Nombre Mascota</label>
-        <input 
-          type="text" 
-          name="mascota" 
-          className="u-full-width" 
-          placeholder="Nombre Mascota" 
-        />
+        {}
+        <Entrada label="Nombre Mascota" type="text" name="mascota" placeholder="Nombre Mascota" />
+        <Entrada label="Nombre Dueño" type="text" name="propietario" placeholder="Nombre dueño" />
+        <Entrada label="Fecha" type="date" name="fecha" />
+        <Entrada label="Hora" type="time" name="hora" />
 
-        <label>Nombre Dueño</label>
-        <input 
-          type="text" 
-          name="propietario" 
-          className="u-full-width" 
-          placeholder="Nombre dueño de la mascota" 
-        />
+        {}
+        <div className="campo">
+            <label>Sintomas</label>
+            <textarea name="sintomas" className="u-full-width"></textarea>
+        </div>
 
-        <label>Fecha</label>
-        <input 
-          type="date" 
-          name="fecha" 
-          className="u-full-width" 
-        />
-
-        <label>hora</label>
-        <input 
-          type="time" 
-          name="hora" 
-          className="u-full-width" 
-        />
-
-        <label>Sintomas</label>
-        <textarea 
-          name="sintomas" 
-          className="u-full-width"
-        ></textarea>
-
-        <button 
-          type="submit" 
-          className="u-full-width button-primary"
-        >
+        <button type="submit" className="u-full-width button-primary">
           Agregar Cita
         </button>
       </form>
