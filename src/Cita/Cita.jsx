@@ -1,15 +1,19 @@
-import { useState } from "react";
-import '../Cita/Cita.css'
-import Datos from '../Cita/Datos';
+
+import './Cita.css';
+import Datos from './Datos';
 
 function Cita({cita, eliminarCita}) {
     return (
-        <>
-            <div>
-                <Datos cita={cita}/>
-                <button onClick={eliminarCita}>Eliminar</button>
-            </div>
-        </>
+        <div className="cita">
+            <Datos cita={cita}/>
+            {}
+            <button 
+                className="button eliminar u-full-width" 
+                onClick={eliminarCita}
+            >
+                Eliminar ×
+            </button>
+        </div>
     );
 }
 
